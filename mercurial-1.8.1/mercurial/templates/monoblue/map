@@ -73,10 +73,7 @@ filerevision = filerevision.tmpl
 fileannotate = fileannotate.tmpl
 filediff = filediff.tmpl
 filelog = filelog.tmpl
-fileline = '
-  <div style="font-family:monospace" class="parity{parity}">
-    <pre><a class="linenr" href="#{lineid}" id="{lineid}">{linenumber}</a> {line|escape}</pre>
-  </div>'
+fileline = '{line|escape}'
 annotateline = '
   <tr class="parity{parity}">
     <td class="linenr">
@@ -88,10 +85,10 @@ annotateline = '
     </td>
     <td class="source">{line|escape}</td>
   </tr>'
-difflineplus = '<span style="color:#008800;"><a class="linenr" href="#{lineid}" id="{lineid}">{linenumber}</a> {line|escape}</span>'
-difflineminus = '<span style="color:#cc0000;"><a class="linenr" href="#{lineid}" id="{lineid}">{linenumber}</a> {line|escape}</span>'
-difflineat = '<span style="color:#990099;"><a class="linenr" href="#{lineid}" id="{lineid}">{linenumber}</a> {line|escape}</span>'
-diffline = '<span><a class="linenr" href="#{lineid}" id="{lineid}">{linenumber}</a> {line|escape}</span>'
+difflineplus = '{line|escape}'
+difflineminus = '{line|escape}'
+difflineat = '{line|escape}'
+diffline = '{line|escape}'
 changelogparent = '
   <tr>
     <th class="parent">parent {rev}:</th>
@@ -159,7 +156,7 @@ branchentry = '
       <a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a>
     </td>
   </tr>'
-diffblock = '<pre>{lines}</pre>'
+diffblock = '{lines}'
 filediffparent = '
   <dt>parent {rev}</dt>
   <dd><a href="{url}diff/{node|short}/{file|urlescape}{sessionvars%urlparameter}">{node|short}</a></dd>'

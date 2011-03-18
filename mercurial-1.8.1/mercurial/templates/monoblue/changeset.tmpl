@@ -2,6 +2,14 @@
 <title>{repo|escape}: changeset {rev}:{node|short}</title>
     <link rel="alternate" type="application/atom+xml" href="{url}atom-log" title="Atom feed for {repo|escape}"/>
     <link rel="alternate" type="application/rss+xml" href="{url}rss-log" title="RSS feed for {repo|escape}"/>
+
+    <script type="text/javascript" src="http://example.com/prettify/js/all.min.js"></script>
+
+    <!-- Include *at least* the core style and default theme -->
+    <link href="http://example.com/prettify/css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="http://example.com/prettify/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link href="http://example.com/prettify/css/shThemeMidnight.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -58,7 +66,14 @@
     </table>
 
     <div class="diff">
-    {diff}
     </div>
+
+<pre class="brush: diff">
+{diff}
+</pre>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
 
 {footer}
