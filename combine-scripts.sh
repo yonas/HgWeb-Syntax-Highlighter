@@ -1,4 +1,4 @@
-cat shCore.js >> all.min.js
+cat shCore.js > all.min.js
 cat shAutoloader.js >> all.min.js
 cat shBrushAppleScript.js >> all.min.js
 cat shBrushAS3.js >> all.min.js
