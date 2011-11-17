@@ -1,3 +1,44 @@
 Use Alex Gorbatchev's Syntax Highlighter for the monoblue theme. 
 
 The Syntax Highlighter is assumed to be installed at http://example.com/prettify 
+
+
+
+INSTALL instructions
+----------------------------------------
+
+
+
+1. Syntax Highlighter
+------------------------------------------
+
+1. Download and install Alex Gorbatchev's Syntax Highlighter (http://alexgorbatchev.com/SyntaxHighlighter)
+
+2. Copy the "combine-scripts.sh" file from this repository to the "scripts" directory of Syntax Highlighter
+
+3. Run the script from inside the scripts directory: sh combine-scripts.sh
+
+
+
+2. Mercurial
+------------------------------------------
+
+1. Replace all instances of "http://example.com/prettify" with the actual location of the Syntax Highlighter in the following files:
+
+mercurial-2.0/mercurial/templates/monoblue/changeset.tmpl
+mercurial-2.0/mercurial/templates/monoblue/filerevision.tmpl
+mercurial-2.0/mercurial/templates/monoblue/filediff.tmpl
+
+
+2. cd mecurial-2.0
+
+3. make all && su -c "make install" && hg version
+
+4. Setup hgweb on your web server (http://mercurial.selenic.com/wiki/HgWebDirStepByStep)
+
+5. Use the monoblue theme by adding the following to your hgweb.config file:
+
+[web]
+style = monoblue
+
+
