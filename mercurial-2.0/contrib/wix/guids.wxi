@@ -1,0 +1,51 @@
+<Include>
+  <!-- These are component GUIDs used for Mercurial installers.
+       YOU MUST CHANGE ALL GUIDs below when copying this file
+       and replace 'Mercurial' in this notice with the name of
+       your project. Component GUIDs have global namespace!      -->
+
+  <!-- contrib.wxs -->
+  <?define contrib.guid = {F17D27B7-4A6B-4cd2-AE72-FED3CFAA585E} ?>
+  <?define contrib.vim.guid = {BB04903A-652D-4C4F-9590-2BD07A2304F2} ?>
+
+  <!-- dist.wxs -->
+  <?define dist.guid = {C3B634A4-1B05-4A40-94A9-38EE853CF693} ?>
+
+  <!-- doc.wxs -->
+  <?define doc.hg.1.html.guid = {AAAA3FDA-EDC5-4220-B59D-D342722358A2} ?>
+  <?define doc.hgignore.5.html.guid = {AA9118C4-F3A0-4429-A5F4-5A1906B2D67F} ?>
+  <?define doc.hgrc.5.html = {E0CEA1EB-FA01-408c-844B-EE5965165BAE} ?>
+  <?define doc.style.css = {172F8262-98E0-4711-BD39-4DAE0D77EF05} ?>
+
+  <!-- help.wxs -->
+  <?define helpFolder.guid = {84025FAA-7EB7-4D79-A097-D2D18852D78E} ?>
+  
+  <!-- i18n.wxs -->
+  <?define i18nFolder.guid = {EADFA693-A0B5-4f31-87C9-3997CFAC1B42} ?>
+
+  <!-- templates.wxs -->
+  <?define templates.root.guid = {111509CB-4C96-4035-80BC-F66A99CD5ACB} ?>
+  <?define templates.atom.guid = {AB5D2908-BC95-44BE-9D79-069EF43D93E2} ?>
+  <?define templates.coal.guid = {B63CCAAB-4EAF-43b4-901E-4BD13F5B78FC} ?>
+  <?define templates.gitweb.guid = {6A33D168-F84E-45AA-912C-23CAC2D66BCA} ?>
+  <?define templates.monoblue.guid = {D27AA750-9394-4DAC-84FC-A546CE8F347A} ?>
+  <?define templates.paper.guid = {D2591E56-709E-49F9-8A5F-1359E1CCD7E0} ?>
+  <?define templates.raw.guid = {04DE03A2-FBFD-4c5f-8DEA-5436DDF4689D} ?>
+  <?define templates.rss.guid = {36069748-1E2A-472B-A212-506CB656A9C1} ?>
+  <?define templates.spartan.guid = {80222625-FA8F-44b1-86CE-1781EF375D09} ?>
+  <?define templates.static.guid = {B27D7311-050A-4A96-9971-B674A0EA21D0} ?>
+
+  <!-- mercurial.wxs -->
+  <?define ProductUpgradeCode = {A1CC6134-E945-4399-BE36-EB0017FDF7CF} ?>
+
+  <?define ComponentMainExecutableGUID = {D102B8FA-059B-4ACC-9FA3-8C78C3B58EEF} ?>
+
+  <?define ReadMe.guid = {56A8E372-991D-4DCA-B91D-93D775974CF5} ?>
+  <?define COPYING.guid = {B7801DBA-1C49-4BF4-91AD-33C65F5C7895} ?>
+  <?define mercurial.rc.guid = {1D5FAEEE-7E6E-43B1-9F7F-802714316B15} ?>
+  <?define mergetools.rc.guid = {E8A1DC29-FF40-4B5F-BD12-80B9F7BF0CCD} ?>
+  <?define paths.rc.guid = {F9ADF21D-5F0B-4934-8CD9-14BE63664721} ?>
+  <?define cacert.pem.guid = {EC1B2630-FE21-46E6-915B-A6545AF703D4} ?>
+  <?define ProgramMenuDir.guid = {D5A63320-1238-489B-B68B-CF053E9577CA} ?>
+
+</Include>
