@@ -2,6 +2,14 @@
 <title>{repo|escape}: {file|escape}@{node|short}</title>
     <link rel="alternate" type="application/atom+xml" href="{url}atom-log" title="Atom feed for {repo|escape}"/>
     <link rel="alternate" type="application/rss+xml" href="{url}rss-log" title="RSS feed for {repo|escape}"/>
+
+    <script type="text/javascript" src="http://example.com/prettify/scripts/all.min.js"></script>
+
+    <!-- Include *at least* the core style and default theme -->
+    <link href="http://example.com/prettify/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="http://example.com/prettify/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link href="http://example.com/prettify/styles/shThemeMidnight.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -59,7 +67,56 @@
     <p class="description">{desc|strip|escape|addbreaks|nonempty}</p>
 
     <div class="source">
+
+        <script type="text/javascript">
+            var filename = "{file}";
+            var ext = filename.substring(filename.lastIndexOf('.')+1);
+
+            switch (ext) {
+                case 'php':
+                case 'module':
+                case 'inc':
+                case 'install':
+                    ext = 'php';
+                    break;
+                case 'info':
+                    ext = 'plain';
+                    break;
+                case 'sh':
+                    ext = 'bash';
+                    break;
+                case 'c':
+                case 'cc':
+                case 'cpp':
+                    ext = 'cpp';
+                    break;
+                case 'js':
+                case 'erl':
+                case 'cs':
+                case 'css':
+                case 'diff':
+                case 'java':
+                case 'pl':
+                case 'py':
+                case 'rb':
+                case 'sql':
+                case 'vb':
+                case 'xml':
+                    break;
+
+                default:
+                    ext = 'plain';
+                }
+
+            document.write('<pre class="brush: ' + ext + '">\n');
+        </script>
+
     {text%fileline}
+        </pre>
+
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
     </div>
 
 {footer}
